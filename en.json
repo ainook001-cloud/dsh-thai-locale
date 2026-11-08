@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "dsh-thai-locale",
+    "description": "Thai UI locale for DSH Web: registers the locale `th` (fallback th → zh → en) and Thai dictionaries for every built-in client namespace."
+  }
+}

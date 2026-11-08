@@ -1,0 +1,40 @@
+{
+  "name": "dsh-thai-locale",
+  "version": "1.0.0",
+  "description": "ชุดภาษาไทยสำหรับ DSH Web — ลงทะเบียนภาษา th (fallback th → zh → en) และคำแปลไทยสำหรับ namespace ของ client ที่มีมาให้",
+  "type": "module",
+  "main": "./lib/index.js",
+  "exports": {
+    ".": {
+      "default": "./lib/index.js"
+    },
+    "./client": {
+      "default": "./lib/client.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true
+    }
+  },
+  "license": "MIT",
+  "icon": "./icon.svg",
+  "files": [
+    "lib",
+    "locale",
+    "icon.svg",
+    "cordis.patch.yml",
+    "package.json",
+    "README.md",
+    "LICENSE",
+    "NOTICE"
+  ],
+  "scripts": {
+    "check": "node tools/check-translations.mjs"
+  }
+}

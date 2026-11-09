@@ -74,4 +74,4 @@ Follow the maintainer's convention: small fixes and corrections bump the last nu
 
 ## License
 
-MIT. See LICENSE. New contributions are accepted under the same license.
+CC BY-NC-SA 4.0. See LICENSE. New contributions are accepted under the same license.

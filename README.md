@@ -81,7 +81,7 @@ dsh-thai-locale/
 ├── TRANSLATION_REVIEW.md   รายการข้อความที่ควรตรวจทาน
 ├── AGENTS.md               คู่มือสำหรับ AI agent
 ├── CONTRIBUTING.md         วิธีร่วมพัฒนา
-├── LICENSE                 สัญญาอนุญาต MIT
+├── LICENSE                 สัญญาอนุญาต CC BY-NC-SA 4.0
 ├── NOTICE                  การระบุที่มาของเนื้อหาจาก DeepSeek Harness
 └── .gitignore              ไฟล์ที่ไม่ควรนำขึ้น Git
 ```
@@ -103,7 +103,7 @@ dsh-thai-locale/
 
 ## 📄 สัญญาอนุญาต
 
-เผยแพร่ภายใต้ [MIT License](LICENSE)
+เผยแพร่ภายใต้ [CC BY-NC-SA 4.0](LICENSE)
 
 ## 🤝 ร่วมพัฒนา
 

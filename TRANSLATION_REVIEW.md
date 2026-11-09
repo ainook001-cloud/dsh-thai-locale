@@ -1,10 +1,10 @@
-# Translation review list
+# รายการตรวจทานคำแปล
 
-These strings contain a word that appears in only one place in the file and includes Thai vowel or tone marks. That pattern often means a typo, but this is a heuristic, so many entries are correct. For each entry, read the text in context and fix it only if it is wrong. Then run `npm run check`.
+ข้อความต่อไปนี้มีคำที่ปรากฏในไฟล์เพียงที่เดียว และมีสระหรือวรรณยุกต์ไทยอยู่ด้วย — รูปแบบแบบนี้มักเป็นคำที่พิมพ์ผิด แต่นี่เป็นแค่การคาดเดา (heuristic) จึงมีหลายรายการที่ถูกต้องแล้ว สำหรับแต่ละรายการ ให้อ่านข้อความในบริบทจริง แล้วแก้เฉพาะรายการที่ผิดจริงเท่านั้น จากนั้นรัน `npm run check`
 
-How to fix: edit the string in `lib/client.js` (inside `const thDicts`). Keep the key name and any `{placeholders}` exactly as they are.
+วิธีแก้: แก้ที่ข้อความใน `lib/client.js` (ภายใน `const thDicts`) คงชื่อคีย์และ `{placeholders}` ไว้ให้เหมือนเดิมทุกตัว
 
-Entries: 178
+จำนวนรายการ: 178
 
 - `chat.message.context.snapshot.supersedes` (suspicious: `สแนปช็อ`, `ตก่อน`)  
   แทนที่สแนปช็อตก่อนหน้า

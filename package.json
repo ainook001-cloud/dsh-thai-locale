@@ -23,11 +23,12 @@
     }
   },
   "license": "CC-BY-NC-SA-4.0",
-  "icon": "./icon.svg",
+  "engines": {
+    "dsh": "^0.2.0"
+  },
   "files": [
     "lib",
     "locale",
-    "icon.svg",
     "cordis.patch.yml",
     "package.json",
     "README.md",

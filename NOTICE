@@ -1,13 +1,13 @@
 NOTICE
 
-This project contains key names and user-interface text from DeepSeek Harness (dsh),
-published by DeepSeek AI under the MIT License at:
+โปรเจกต์นี้มีชื่อคีย์และข้อความอินเทอร์เฟซผู้ใช้จาก DeepSeek Harness (dsh)
+ซึ่งเผยแพร่โดย DeepSeek AI ภายใต้ MIT License ที่:
   https://github.com/deepseek-ai/deepseek-harness
 
-Those portions remain subject to that project's copyright notice and MIT License.
-The full copyright line and license text are in that repository's LICENSE file:
-  [PASTE THE EXACT COPYRIGHT LINE FROM THE DSH REPOSITORY LICENSE FILE HERE]
+ส่วนเหล่านั้นยังอยู่ภายใต้ประกาศลิขสิทธิ์และ MIT License ของโปรเจกต์นั้น
+บรรทัดลิขสิทธิ์ฉบับเต็มและข้อความสัญญาอนุญาตอยู่ในไฟล์ LICENSE ของ repo นั้น:
+  [วางบรรทัดลิขสิทธิ์จากไฟล์ LICENSE ของ DSH ที่นี่]
 
-This project is an independent community plugin. It is not affiliated with, endorsed by,
-or sponsored by DeepSeek AI. The names "DeepSeek" and "DSH" are used only to describe
-compatibility. Trademarks belong to their owners.
+โปรเจกต์นี้เป็นปลั๊กอินอิสระของชุมชน ไม่ได้สังกัด ไม่ได้รับการรับรอง
+และไม่ได้ได้รับการสนับสนุนจาก DeepSeek AI ชื่อ "DeepSeek" และ "DSH" ใช้เพียงเพื่อบอก
+ความเข้ากันได้เท่านั้น เครื่องหมายการค้าเป็นของเจ้าของแต่ละราย

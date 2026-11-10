@@ -1,6 +1,6 @@
-# dsh-thai-locale: bundle patch layer.
-# When this package is installed into a profile, this patch inserts the
-# plugin row into the composed configuration.
+# dsh-thai-locale: ชั้นแพตช์ของบันเดิล
+# เมื่อติดตั้งแพ็กเกจนี้เข้าโปรไฟล์ แพตช์นี้จะแทรก
+# แถวปลั๊กอินเข้าไปในการตั้งค่าที่ประกอบขึ้น
 
 - insert:
     - id: dsh-thai-locale

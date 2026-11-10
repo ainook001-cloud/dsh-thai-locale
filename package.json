@@ -1,6 +1,6 @@
 {
   "name": "dsh-thai-locale",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "ชุดภาษาไทยสำหรับ DSH Web และ Desktop (Electron) — ลงทะเบียนภาษา th (fallback th → zh → en) และคำแปลไทยสำหรับ namespace ของ client ที่มีมาให้",
   "type": "module",
   "main": "./lib/index.js",

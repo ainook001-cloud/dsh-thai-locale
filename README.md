@@ -72,8 +72,11 @@ dsh-thai-locale/
 ├── locale/
 │   ├── en.json             ชื่อและคำอธิบายภาษาอังกฤษ
 │   └── th.json             ชื่อและคำอธิบายภาษาไทย
+├── plugin-locales/         ชื่อ/คำอธิบายปลั๊กอินทดลองฉบับไทย (22 ตัว)
+│   └── experimental/        หนึ่งโฟลเดอร์ต่อหนึ่งแพ็กเกจ + index.json
 ├── tools/
-│   └── check-translations.mjs   ตรวจคำแปลหาอักษรเพี้ยน
+│   ├── check-translations.mjs   ตรวจคำแปลหาอักษรเพี้ยน
+│   └── install-plugin-locales.mjs  ติดตั้งชื่อปลั๊กอินทดลองฉบับไทยเข้าเอนจิน
 ├── TRANSLATION_REVIEW.md   รายการข้อความที่ควรตรวจทาน
 ├── AGENTS.md               คู่มือสำหรับ AI agent
 ├── CONTRIBUTING.md         วิธีร่วมพัฒนา

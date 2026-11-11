@@ -40,7 +40,8 @@
     "docs",
     "tests",
     "progress_report.md",
-    "TRANSLATION_STATUS.md"
+    "TRANSLATION_STATUS.md",
+    "VERSIONING.md"
   ],
   "scripts": {
     "check": "node tools/check-translations.mjs",

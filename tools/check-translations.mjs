@@ -31,6 +31,8 @@ const TONE = "\u0E48-\u0E4B";
 const TONE_BEFORE_VOWEL = new RegExp(`[${TONE}][${ABOVE_BELOW}\u0E47]`); // วรรณยุกต์ต้องมาหลังสระ
 const TWO_UPPER_VOWELS = new RegExp(`[\u0E31\u0E34-\u0E37][\u0E31\u0E34-\u0E37]`);
 const LEADING_MARK = new RegExp(`^[${ABOVE_BELOW}${TONE}\u0E47\u0E4D]`);  // พยางค์เริ่มด้วยเครื่องหมายไม่ได้
+// เครื่องหมายประกอบติดช่องว่าง = อักษรเพี้ยน เช่น ดต้ ิดตั้ง / มอี ัอัปเดต
+const SPACE_BEFORE_MARK = /\s[ั-\u0E3A\u0E47-\u0E4E]/;
 
 const errors = [];
 const warnings = [];
@@ -46,6 +48,7 @@ for (const ns of Object.keys(dicts)) {
     if (CJK.test(value)) errors.push(`${id}: มีอักษรจีน/ญี่ปุ่น (CJK)`);
     if (!THAI.test(value)) continue;  // English-only values are allowed (brand/command names)
     if (LAO.test(value)) errors.push(`${id}: มีอักษรลาวที่หน้าตาคล้ายไทย: ${value}`);
+    if (SPACE_BEFORE_MARK.test(value)) errors.push(`${id}: เครื่องหมายประกอบติดช่องว่าง: ${value}`);
     if (MARK_RUN.test(value)) errors.push(`${id}: เครื่องหมายประกอบซ้ำ: ${value}`);
     if (TONE_TWICE.test(value)) warnings.push(`${id}: วรรณยุกต์สองตัวติดกัน: ${value}`);
     for (const { segment } of seg.segment(value)) {

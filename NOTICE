@@ -1,13 +1,86 @@
 NOTICE
 
-โปรเจกต์นี้มีชื่อคีย์และข้อความอินเทอร์เฟซผู้ใช้จาก DeepSeek Harness (dsh)
-ซึ่งเผยแพร่โดย DeepSeek AI ภายใต้ MIT License ที่:
-  https://github.com/deepseek-ai/deepseek-harness
+โปรเจกต์นี้เป็นชุดคำแปลภาษาไทย ไม่ได้เป็นผลิตภัณฑ์ทางการของ DeepSeek AI
+เนื้อหาบางส่วนดัดแปลงมาจากโครงการอื่น ตามรายการด้านล่าง
 
-ส่วนเหล่านั้นยังอยู่ภายใต้ประกาศลิขสิทธิ์และ MIT License ของโปรเจกต์นั้น
-บรรทัดลิขสิทธิ์ฉบับเต็มและข้อความสัญญาอนุญาตอยู่ในไฟล์ LICENSE ของ repo นั้น:
-  [วางบรรทัดลิขสิทธิ์จากไฟล์ LICENSE ของ DSH ที่นี่]
+รายการนี้ตรวจจากไฟล์จริงในรีโป (46 ไฟล์) ณ เวอร์ชัน 1.0.5
+
+════════════════════════════════════════════════════════════════════
+1) ข้อความอินเทอร์เฟซผู้ใช้
+   ไฟล์: lib/client.js — 4,601 คีย์ ใน 75 namespace
+   ต้นฉบับ: DeepSeek Harness (dsh)
+   เจ้าของลิขสิทธิ์: Copyright (c) 2026 DeepSeek
+   สัญญาอนุญาต: MIT License
+   ที่มา: https://github.com/deepseek-ai/deepseek-harness
+
+   ข้อความต้นฉบับยังอยู่ภายใต้ประกาศลิขสิทธิ์และ MIT License ของโครงการนั้น
+   ข้อความสัญญาอนุญาตฉบับเต็มอยู่ในไฟล์ LICENSE ของรีโปข้างต้น
+
+   หมายเหตุ: โปรเจกต์นี้เก็บ "คำแปลไทย" ของข้อความเหล่านั้น ไม่ได้คัดลอกโค้ด
+   ต้นฉบับมาใช้ และไม่ได้หมายความว่า DeepSeek AI รับรองคำแปลนี้
+
+════════════════════════════════════════════════════════════════════
+2) ชื่อและคำอธิบายปลั๊กอินทดลอง
+   ไฟล์: plugin-locales/experimental/ — 22 แพ็กเกจ (th.json 22 ไฟล์ + index.json)
+   ต้นฉบับ: locale/en.json และ locale/zh.json ในแพ็กเกจ
+            @deepseek-ai/dsh-experimental-* ที่แถมมากับ DSH
+   เจ้าของลิขสิทธิ์: Copyright (c) 2026 DeepSeek
+   สัญญาอนุญาต: MIT License
+   ที่มา: https://github.com/deepseek-ai/deepseek-harness
+
+   ปลั๊กอินที่แปลชื่อไว้: agent-team, agent-team-profile, api-speech-to-text,
+   auto-review, badge-skill-bundle, client-ui-agent-team,
+   client-ui-cot-translation, client-ui-voice-input, cot-translation-bundle,
+   inspector, inspector-profile, plugin-market-bundle, ralph-bundle,
+   session-inspector, session-search, session-titles-bundle,
+   speech-to-text, speech-to-text-sensevoice, terminal-bundle,
+   tool-agent-team, tool-worktree, voice-input-bundle
+
+════════════════════════════════════════════════════════════════════
+3) แคตตาล็อกตลาดปลั๊กอิน
+   ไฟล์: market/ — README.md, build-th.mjs, glossary.th.md,
+         data/th/agi.json (45 รายการ), data/th/wsl.json (12 รายการ)
+   ต้นฉบับ: awesome-dsh-plugin — "A curated list of plugins for DeepSeek Harness"
+   สัญญาอนุญาต: CC0-1.0 (Creative Commons Zero v1.0 Universal)
+   ที่มา: https://github.com/awesome-dsh-plugin/awesome-dsh-plugin
+
+   CC0-1.0 อุทิศแคตตาล็อกให้เป็นสาธารณสมบัติ จึงนำมาใช้และแปลได้โดยไม่มีเงื่อนไข
+
+   แต่คำอธิบายปลั๊กอินแต่ละรายการเป็นผลงานของผู้เขียนปลั๊กอินตัวนั้น ๆ
+   ลิขสิทธิ์ของคำอธิบายแต่ละรายการยังเป็นของผู้เขียนแต่ละราย
+   โปรเจกต์นี้ไม่ได้อ้างสิทธิ์ในคำอธิบายเหล่านั้น และไม่ได้ให้สิทธิ์ใด ๆ
+   เหนือตัวปลั๊กอินนั้น ๆ
+
+   หมายเหตุ: ไฟล์ index.json และ source-index.json (ตัวละ ~4.3 MB) ไม่ได้อยู่ในรีโปนี้
+   สร้างใหม่ได้ด้วย `node market/build-th.mjs <ต้นฉบับ>.json <ปลายทาง>.json`
+
+════════════════════════════════════════════════════════════════════
+4) งานต้นฉบับของโปรเจกต์นี้เอง
+   เจ้าของลิขสิทธิ์: Copyright (c) 2026 dsh-thai-locale contributors
+   สัญญาอนุญาต: CC BY-NC-SA 4.0 — ดูไฟล์ LICENSE
+
+   ไฟล์ที่เป็นงานของโปรเจกต์:
+   - คำแปลไทยทั้งหมด (lib/client.js ส่วนค่า, market/data/th/*.json,
+     plugin-locales/experimental/*/th.json)
+   - lib/index.js, cordis.patch.yml, package.json
+   - tools/check-translations.mjs, tools/install-plugin-locales.mjs,
+     tools/generate-icon.py
+   - icon.svg
+   - README.md, AGENTS.md, CONTRIBUTING.md, TRANSLATION_REVIEW.md,
+     docs/show-your-plugins.md, market/README.md, market/glossary.th.md
+   - locale/en.json, locale/th.json
+
+   ⚠️ ข้อควรทราบ: สัญญาอนุญาตนี้ห้ามใช้เชิงพาณิชย์และกำหนดให้งานที่ดัดแปลง
+   ต้องเผยแพร่ภายใต้สัญญาเดียวกัน (ShareAlike) ส่วน MIT ของ DSH ในหัวข้อ 1–2
+   ไม่มีเงื่อนไขเหล่านี้ ผู้นำไปใช้ควรตรวจสอบให้เข้ากับกรณีใช้งานของตน
+   หากต้องการนำข้อความต้นฉบับของ DSH ไปใช้ในเชิงพาณิชย์
+   ให้ใช้สิทธิ์จากต้นฉบับ MIT โดยตรงที่รีโปของ DeepSeek Harness
+
+   CC0-1.0 ของแคตตาล็อกในหัวข้อ 3 ไม่มีเงื่อนไข จึงไม่ติด ShareAlike
+
+════════════════════════════════════════════════════════════════════
+เครื่องหมายการค้า
 
 โปรเจกต์นี้เป็นปลั๊กอินอิสระของชุมชน ไม่ได้สังกัด ไม่ได้รับการรับรอง
-และไม่ได้ได้รับการสนับสนุนจาก DeepSeek AI ชื่อ "DeepSeek" และ "DSH" ใช้เพียงเพื่อบอก
-ความเข้ากันได้เท่านั้น เครื่องหมายการค้าเป็นของเจ้าของแต่ละราย
+และไม่ได้ได้รับการสนับสนุนจาก DeepSeek AI ชื่อ "DeepSeek" และ "DSH"
+ใช้เพียงเพื่อบอกความเข้ากันได้เท่านั้น เครื่องหมายการค้าเป็นของเจ้าของแต่ละราย

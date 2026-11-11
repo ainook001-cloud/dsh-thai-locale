@@ -60,6 +60,8 @@ To add Thai names for the experimental plugin cards:
 node tools/install-plugin-locales.mjs
 ```
 
+(ถ้าเครื่องไม่มี npm ให้รันตัวตรวจด้วย `node tools/check-translations.mjs` แทน `npm run check`)
+
 (Restart DSH once — plugin display names are read at boot.)
 
 > ⚠️ Re-running this **overwrites** any existing `th.json` in those packages with the
@@ -88,7 +90,7 @@ translation review) and the **Awesome DeepSeek Harness** list.
 
 - Repo: https://github.com/ainook001-cloud/dsh-thai-locale
 - Releases: https://github.com/ainook001-cloud/dsh-thai-locale/releases
-- Changelog: see the release notes (1.0.0 → 1.0.5)
+- Changelog: see the release notes (1.0.0 → 1.0.6)
 
 ## Unofficial
 
@@ -124,7 +126,7 @@ from them, not from me.
 |---|---|
 | UI strings | **4,601 / 4,601** (75 namespaces) |
 | Market metadata (name, description, 23 categories) | done |
-| Market plugin descriptions | **57 / 5,324** — growing one category at a time (agi 45, wsl 12) |
+| Market plugin descriptions | **57 of 5,324** — growing one category at a time (agi 45, wsl 12). The 5,324 total comes from the awesome-dsh-plugin catalog at fetch time; this repo does not ship that index. |
 | Experimental plugin cards | **22 / 22** |
 | Tested platforms | DSH Web `0.2.1-rc.2` ✅ · DSH Desktop ⏳ not yet tested |
 

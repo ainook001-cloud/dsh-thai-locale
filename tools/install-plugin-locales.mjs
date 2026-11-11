@@ -1,8 +1,18 @@
 #!/usr/bin/env node
-// ติดตั้งคำแปลไทยของชื่อ/คำอธิบายปลั๊กอินทดลองเข้าโฟลเดอร์เอนจินของ DSH
-// วิธีใช้: node tools/install-plugin-locales.mjs [พาธengine/node_modules/@deepseek-ai]
-// ไม่มี dependency และไม่แก้ไฟล์เดิมของเอนจิน — เขียนเฉพาะไฟล์ th.json ใหม่
-// รันซ้ำได้ (เขียนทับเฉพาะ th.json ที่มีอยู่ในโฟลเดอร์นี้)
+// ติดตั้งคำแปลไทยของชื่อ/คำอธิบายปลั๊กอินทดลอง เข้าโฟลเดอร์ locale ของแพ็กเกจในเอนจิน DSH
+//
+// วิธีใช้:
+//   node tools/install-plugin-locales.mjs [พาธเอนจิน/node_modules/@deepseek-ai]
+//
+// ⚠️ พฤติกรรมการเขียนไฟล์ — โปรดอ่านก่อนรัน
+//   • เขียน/อัปเดตเฉพาะไฟล์ `locale/th.json` เท่านั้น
+//   • **ถ้ามี th.json อยู่แล้ว จะถูกเขียนทับ** ด้วยไฟล์จากรีโปนี้ (ไม่มีการ merge)
+//     ถ้าคุณแก้ th.json ไว้เอง ให้สำรองก่อนรัน
+//   • ไม่แตะ en.json, zh.json หรือไฟล์อื่นของแอป (ไม่ได้อ่านและไม่ได้เขียน)
+//   • รันซ้ำได้ ผลลัพธ์เท่าเดิม (idempotent) เพราะเขียนทับด้วยเนื้อหาเดิม
+//
+// ไฟล์ที่ติดตั้งจะอยู่ในโฟลเดอร์เอนจิน ซึ่งเป็นของที่มากับ APK —
+// อัปเดตแอปหรือใช้ Safe Mode แล้วไฟล์จะหาย ให้รันสคริปต์นี้อีกครั้ง
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -26,20 +36,27 @@ if (!fs.existsSync(path.join(srcRoot, "index.json"))) {
 }
 
 const entries = JSON.parse(fs.readFileSync(path.join(srcRoot, "index.json"), "utf8"));
-let done = 0;
+let written = 0;
+let overwritten = 0;
 const skipped = [];
+
 for (const entry of entries) {
   const pkgDir = entry.pkg.slice(entry.pkg.indexOf("/") + 1); // @deepseek-ai/x -> x
   const from = path.join(srcRoot, pkgDir, "th.json");
   const to = path.join(target, pkgDir, "locale", "th.json");
+  // แตะเฉพาะแพ็กเกจที่แอปมีอยู่จริง (มี locale/en.json) — แพ็กเกจอื่นข้ามไป
   if (!fs.existsSync(path.join(target, pkgDir, "locale", "en.json"))) {
     skipped.push(pkgDir);
     continue;
   }
+  if (fs.existsSync(to)) overwritten++;
   fs.mkdirSync(path.dirname(to), { recursive: true });
   fs.copyFileSync(from, to);
-  done++;
+  written++;
 }
-console.log(`ติดตั้งแล้ว ${done} ไฟล์ที่ ${target}`);
+
+console.log(`เขียน th.json ${written} ไฟล์ ที่ ${target}`);
+if (overwritten) console.log(`  ในจำนวนนี้เขียนทับไฟล์เดิม ${overwritten} ไฟล์ (เนื้อหาจากรีโปนี้ ไม่ได้ merge)`);
 if (skipped.length) console.log("ข้าม (ไม่พบ en.json):", skipped.join(", "));
+console.log("ไม่แตะ en.json / zh.json หรือไฟล์อื่นของแอป");
 console.log("ต้องรีสตาร์ท DSH ให้ชื่อปลั๊กอินอ่านใหม่");

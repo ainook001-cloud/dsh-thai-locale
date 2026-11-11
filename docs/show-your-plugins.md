@@ -40,8 +40,9 @@ interface, not just a few labels.
   disable the whole plugin
 - Ships a dependency-free checker (`npm run check`) that validates the dictionary for
   CJK leftovers, Lao look-alike code points, doubled tone marks and misplaced vowels
-- Installer script for the plugin-card locales writes **only new `th.json` files** and
-  never modifies files shipped by the app
+- Installer script for the plugin-card locales writes/updates **only `th.json`**.
+  If a `th.json` already exists it **is overwritten** with the copy from this repo (no merge);
+  `en.json`, `zh.json` and every other app file are left untouched
 
 ## Install
 
@@ -58,6 +59,9 @@ node tools/install-plugin-locales.mjs
 ```
 
 (Restart DSH once — plugin display names are read at boot.)
+
+> ⚠️ Re-running this **overwrites** any existing `th.json` in those packages with the
+> copy from this repo. Back up first if you edited them locally.
 
 ## Known limitations (being upfront)
 
@@ -82,7 +86,7 @@ translation review) and the **Awesome DeepSeek Harness** list.
 
 - Repo: https://github.com/ainook001-cloud/dsh-thai-locale
 - Releases: https://github.com/ainook001-cloud/dsh-thai-locale/releases
-- Changelog: see the release notes (1.0.0 → 1.0.4)
+- Changelog: see the release notes (1.0.0 → 1.0.5)
 
 ## Unofficial
 

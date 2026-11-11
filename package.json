@@ -1,6 +1,6 @@
 {
   "name": "dsh-thai-locale",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "ชุดภาษาไทยสำหรับ DSH Web และ Desktop (Electron) — ลงทะเบียนภาษา th (fallback th → zh → en) และคำแปลไทยสำหรับ namespace ของ client ที่มีมาให้",
   "type": "module",
   "main": "./lib/index.js",
@@ -29,13 +29,16 @@
   "files": [
     "lib",
     "locale",
+    "plugin-locales",
     "cordis.patch.yml",
     "package.json",
     "README.md",
     "LICENSE",
-    "NOTICE"
+    "NOTICE",
+    "tools"
   ],
   "scripts": {
-    "check": "node tools/check-translations.mjs"
+    "check": "node tools/check-translations.mjs",
+    "install-locales": "node tools/install-plugin-locales.mjs"
   }
 }

@@ -16,7 +16,7 @@
 
 1. กด **Fork** ที่มุมขวาบนของหน้า repository
 2. แก้ไขไฟล์ `lib/client.js` เฉพาะส่วน `const thDicts = { ... }`
-3. ตรวจด้วยคำสั่ง `node --check lib/client.js` และ `npm run check` ต้องแสดง `Errors: 0`
+3. ตรวจด้วยคำสั่ง `node --check lib/client.js` และ `node tools/check-translations.mjs` (หรือ `npm run check`) ต้องแสดง `ข้อผิดพลาด: 0`
 4. ทดสอบในหน้า DSH Web ว่าข้อความที่แก้แสดงถูกต้อง
 5. เปิด **Pull Request** และอธิบายว่าแก้อะไร ทำไม
 

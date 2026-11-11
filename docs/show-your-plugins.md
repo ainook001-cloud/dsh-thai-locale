@@ -17,16 +17,18 @@
 ```markdown
 ## What it is
 
-**dsh-thai-locale** adds a Thai (`th`) UI language to DeepSeek Harness — the whole
-interface, not just a few labels.
+**dsh-thai-locale** adds a Thai (`th`) UI language to DeepSeek Harness.
+I translated the interface strings; the strings themselves come from DSH.
 
-- **4,601 UI strings** translated across **75 namespaces** (chat, settings, plugins,
-  permissions, schedules, terminal, voice input, …)
-- Registers the `th` locale and **switches to Thai automatically on install**
-- Fallback order `th → zh → en`, so a missing key never shows a blank label
-- Works on **DSH Web and DSH Desktop** (same Web UI under Electron)
+- 4,601 UI strings across 75 namespaces — chat, settings, plugins, permissions,
+  schedules, terminal, voice input and the rest
+- Registers the `th` locale; the plugin switches to Thai on install
+- Falls back to `zh` then `en` when a key is missing, so you get Chinese or English
+  rather than an empty label
+- Tested on DSH Web with 0.2.1-rc.2. DSH Desktop runs the same Web UI, so it should
+  work there too — I have not installed it on Desktop to confirm
 
-### Extras that go beyond the UI itself
+### Two extras
 
 | Extra | What it does |
 |---|---|
@@ -73,7 +75,7 @@ node tools/install-plugin-locales.mjs
 - **178 strings are queued for manual review** in `TRANSLATION_REVIEW.md`. Many are already
   correct; the file exists because a heuristic flagged them.
 - **Market plugin descriptions: 57 of 5,324 translated.** Categories, market name and
-  description are complete.
+  description are done.
 - Some UI text may still show Chinese or English through the `th → zh → en` fallback.
 
 ## Where this is posted
@@ -121,7 +123,7 @@ from them, not from me.
 | Part | Coverage |
 |---|---|
 | UI strings | **4,601 / 4,601** (75 namespaces) |
-| Market metadata (name, description, 23 categories) | complete |
+| Market metadata (name, description, 23 categories) | done |
 | Market plugin descriptions | **57 / 5,324** — growing one category at a time (agi 45, wsl 12) |
 | Experimental plugin cards | **22 / 22** |
 | Tested platforms | DSH Web `0.2.1-rc.2` ✅ · DSH Desktop ⏳ not yet tested |

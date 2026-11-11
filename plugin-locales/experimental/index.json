@@ -1,0 +1,112 @@
+[
+  {
+    "pkg": "@deepseek-ai/dsh-experimental-agent-team",
+    "title": "การทำงานเป็นทีม",
+    "description": "จัดการสมาชิกทีม ข้อความของสมาชิก และงานที่แชร์กัน"
+  },
+  {
+    "pkg": "@deepseek-ai/dsh-experimental-agent-team-profile",
+    "title": "ทีมเอเจนต์",
+    "description": "เปิดใช้การทำงานเป็นทีม เครื่องมือทีม รายชื่อสมาชิก และกระดานงานที่แชร์กัน"
+  },
+  {
+    "pkg": "@deepseek-ai/dsh-experimental-api-speech-to-text",
+    "title": "อินเทอร์เฟซถอดเสียงเป็นข้อความ",
+    "description": "ให้บริการถอดเสียงอัดเป็นข้อความสำหรับเบราว์เซอร์"
+  },
+  {
+    "pkg": "@deepseek-ai/dsh-experimental-auto-review",
+    "title": "ตรวจอนุมัติอัตโนมัติ",
+    "description": "โหมดสิทธิ์แบบตรวจอัตโนมัติ ให้โมเดลตัดสินก่อนเรียกเครื่องมือทุกครั้งว่าจะอนุญาตหรือไม่"
+  },
+  {
+    "pkg": "@deepseek-ai/dsh-experimental-badge-skill-bundle",
+    "title": "สกิลตรา DSH",
+    "description": "ให้เอเจนต์เติมตรา «powered by dsh» ในผลงานอย่างเอกสารหรือ PR"
+  },
+  {
+    "pkg": "@deepseek-ai/dsh-experimental-client-ui-agent-team",
+    "title": "แผงทีม",
+    "description": "ดูสมาชิกทีมและงานที่แชร์กัน แล้วสลับไปยังเซสชันของสมาชิก"
+  },
+  {
+    "pkg": "@deepseek-ai/dsh-experimental-client-ui-cot-translation",
+    "title": "แปลกระบวนการคิดด้วยเครื่อง",
+    "description": "แปลเนื้อหาการคิดที่กางออกเป็นภาษาอื่นด้วยเครื่อง"
+  },
+  {
+    "pkg": "@deepseek-ai/dsh-experimental-client-ui-voice-input",
+    "title": "อินพุตเสียงอัด",
+    "description": "อัดเสียงแล้วใส่ผลที่ถอดได้ลงในร่างบทสนทนา แก้ไขก่อนส่งได้"
+  },
+  {
+    "pkg": "@deepseek-ai/dsh-experimental-cot-translation-bundle",
+    "title": "แปลกระบวนการคิดด้วยเครื่อง",
+    "description": "แปลเนื้อหาการคิดที่กางออกด้วยเครื่อง ต้นฉบับจะถูกส่งไปยังบริการที่เลือก"
+  },
+  {
+    "pkg": "@deepseek-ai/dsh-experimental-inspector",
+    "title": "วินิจฉัย NodeJS",
+    "description": "กด Ctrl/Cmd+Shift+. เพื่อเปิด Chrome DevTools ในแผงล่างสำหรับตรวจแก้"
+  },
+  {
+    "pkg": "@deepseek-ai/dsh-experimental-inspector-profile",
+    "title": "เครื่องมือนักพัฒนา",
+    "description": "ดูข้อมูลดิบของเซสชันที่กำลังตรวจ ข้อมูลกลุ่มข้อความแช็ต และตรวจหลังบ้าน NodeJS"
+  },
+  {
+    "pkg": "@deepseek-ai/dsh-experimental-plugin-market-bundle",
+    "title": "ตลาดปลั๊กอินกำหนดเอง",
+    "description": "เพิ่มแท็บ «ค้นพบ» ในหน้าปลั๊กอิน เรียกดูและติดตั้งปลั๊กอินจากดัชนีตลาดที่คุณเพิ่มไว้"
+  },
+  {
+    "pkg": "@deepseek-ai/dsh-experimental-ralph-bundle",
+    "title": "ลูป Ralph",
+    "description": "ใช้เอเจนต์ใหม่ทำงานเป็นรอบตามที่ผู้ใช้ขอไว้อย่างชัดเจน"
+  },
+  {
+    "pkg": "@deepseek-ai/dsh-experimental-session-inspector",
+    "title": "วินิจฉัยข้อมูลเซสชัน",
+    "description": "เปิดใช้การวิเคราะห์ข้อมูลดิบและกลุ่มข้อความแช็ตของเซสชันปัจจุบันในแถบข้าง"
+  },
+  {
+    "pkg": "@deepseek-ai/dsh-experimental-session-search",
+    "title": "ค้นหาเซสชัน",
+    "description": "ให้เอเจนต์มีเครื่องมือค้นและอ่านเซสชันย้อนหลังของเวิร์กสเปซนี้"
+  },
+  {
+    "pkg": "@deepseek-ai/dsh-experimental-session-titles-bundle",
+    "title": "หัวข้อที่อัปเดตตามบทสนทนา",
+    "description": "อัปเดตหัวข้อเซสชันเมื่อมีข้อความใหม่จากผู้ใช้"
+  },
+  {
+    "pkg": "@deepseek-ai/dsh-experimental-speech-to-text",
+    "title": "การรู้จำเสียง",
+    "description": "จัดการบริการถอดเสียงเป็นข้อความ และเลือกบริการที่ใช้ถอด"
+  },
+  {
+    "pkg": "@deepseek-ai/dsh-experimental-speech-to-text-sensevoice",
+    "title": "SenseVoice ถอดเสียงในเครื่อง",
+    "description": "ใช้ SenseVoice บนเครื่องนี้ถอดเสียงอัดเป็นข้อความ"
+  },
+  {
+    "pkg": "@deepseek-ai/dsh-experimental-terminal-bundle",
+    "title": "เทอร์มินัลแบบคงอยู่",
+    "description": "ให้โปรเซส shell ทำงานต่อเนื่องข้ามการเรียกเครื่องมือหลายครั้ง"
+  },
+  {
+    "pkg": "@deepseek-ai/dsh-experimental-tool-agent-team",
+    "title": "เครื่องมือทีม",
+    "description": "ให้เอเจนต์มีเครื่องมือประสานสมาชิก สื่อสารข้อความ และจัดการงานที่แชร์กัน"
+  },
+  {
+    "pkg": "@deepseek-ai/dsh-experimental-tool-worktree",
+    "title": "Git worktree",
+    "description": "ให้เอเจนต์สร้างสาขา Git และ worktree ใหม่ แล้วทำงานต่อในนั้น"
+  },
+  {
+    "pkg": "@deepseek-ai/dsh-experimental-voice-input-bundle",
+    "title": "อินพุตเสียง",
+    "description": "ใช้ SenseVoice บนเครื่องถอดเสียงอัด ครั้งแรกต้องติดตั้ง dependency ก่อน"
+  }
+]

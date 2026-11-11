@@ -1,7 +1,7 @@
 {
   "name": "dsh-thai-locale",
-  "version": "1.0.5",
-  "description": "ชุดภาษาไทยสำหรับ DSH Web และ Desktop (Electron) — ลงทะเบียนภาษา th (fallback th → zh → en) และคำแปลไทยสำหรับ namespace ของ client ที่มีมาให้",
+  "version": "1.0.6",
+  "description": "ชุดภาษาไทยสำหรับ DSH Web (ทดสอบกับ 0.2.1-rc.2) — ลงทะเบียนภาษา th (fallback th → zh → en) และคำแปลไทยสำหรับ namespace ของ client ที่มีมาให้; คาดว่าใช้ได้บน DSH Desktop ที่รัน Web UI เดียวกัน แต่ยังไม่ได้ทดสอบติดตั้งจริง",
   "type": "module",
   "main": "./lib/index.js",
   "exports": {
@@ -37,10 +37,14 @@
     "NOTICE",
     "tools",
     "market",
-    "docs"
+    "docs",
+    "tests",
+    "progress_report.md",
+    "TRANSLATION_STATUS.md"
   ],
   "scripts": {
     "check": "node tools/check-translations.mjs",
-    "install-locales": "node tools/install-plugin-locales.mjs"
+    "install-locales": "node tools/install-plugin-locales.mjs",
+    "test": "node --test tests/*.test.mjs"
   }
 }

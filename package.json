@@ -1,6 +1,6 @@
 {
   "name": "dsh-thai-locale",
-  "version": "1.0.6",
+  "version": "1.0.6.1",
   "description": "ชุดภาษาไทยสำหรับ DSH Web (ทดสอบกับ 0.2.1-rc.2) — ลงทะเบียนภาษา th (fallback th → zh → en) และคำแปลไทยสำหรับ namespace ของ client ที่มีมาให้; คาดว่าใช้ได้บน DSH Desktop ที่รัน Web UI เดียวกัน แต่ยังไม่ได้ทดสอบติดตั้งจริง",
   "type": "module",
   "main": "./lib/index.js",
@@ -24,7 +24,7 @@
   },
   "license": "CC-BY-NC-SA-4.0",
   "engines": {
-    "dsh": "^0.2.0"
+    "dsh": ">=0.2.1-rc.2 <0.3.0"
   },
   "files": [
     "lib",
@@ -41,7 +41,12 @@
     "tests",
     "progress_report.md",
     "TRANSLATION_STATUS.md",
-    "VERSIONING.md"
+    "VERSIONING.md",
+    "TRANSLATION_REVIEW.md",
+    "CONTRIBUTING.md",
+    "AGENTS.md",
+    "icon.svg",
+    "goldfish_review_report.md"
   ],
   "scripts": {
     "check": "node tools/check-translations.mjs",

@@ -1,0 +1,17 @@
+{
+ "title": "PDF",
+ "pageImage": "หน้า {page} ของ PDF",
+ "loading": "กําลังเรนเดอร์เอกสาร...",
+ "rendering": "กําลังเรนเดอร์หน้า...",
+ "failed": "โชว์ PDF ไม่ได้: {message}",
+ "password": "PDF นี้ต้องใส่รหัสผ่าน ซึ่งตัวดูตัวอย่างยังไม่รับไฟล์ที่ล็อกไว้",
+ "workerFailed": "เรนเดอร์ PDF ต่อไม่ได้ ลองอีกที",
+ "unsupported": "จะดูตัวอย่าง PDF ต้องมีเนื้อหาไฟล์ครบ",
+ "retry": "ลองอีกที",
+ "zoomControls": "ตัวคุมการซูม",
+ "zoomMenu": "เลือกการซูม",
+ "zoomOut": "ซูมออก",
+ "zoomIn": "ซูมเข้า",
+ "zoomFitWidth": "พอดีความกว้าง",
+ "zoomValue": "{percent}%"
+}

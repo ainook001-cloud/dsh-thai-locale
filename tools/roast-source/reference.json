@@ -1,0 +1,17 @@
+{
+ "candidate.noCwd": "(ยังไม่มีโฟลเดอร์ทำงาน)",
+ "crumb.root": "โฟลเดอร์งาน",
+ "fileOpen.close": "ปิดไป",
+ "fileOpen.failed": "เปิด “{path}” ไม่ขึ้น ลองใหม่หรือปิดไปเลย",
+ "fileOpen.retry": "ลองอีกรอบ",
+ "fileOpen.title": "ไฟล์นี้เปิดไม่ขึ้น",
+ "section.files": "ไฟล์กับโฟลเดอร์",
+ "section.sessions": "เซสชันที่เปิดไว้",
+ "section.subagents": "ตัวช่วยที่แยกไปทำ",
+ "time.days": "{n} วัน",
+ "time.hours": "{n} ชม.",
+ "time.minutes": "{n} นาที",
+ "time.months": "{n} เดือน",
+ "time.now": "เดี๋ยวนี้เลย",
+ "time.years": "{n} ปี"
+}

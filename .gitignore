@@ -6,3 +6,6 @@ Thumbs.db
 *.bak
 *.bak-*
 *.th-bak
+
+# ค่าอ้างอิงที่สร้างจาก lib/client.js (สร้างใหม่ได้ด้วย npm run roast:ref)
+tools/roast-source/_ref/

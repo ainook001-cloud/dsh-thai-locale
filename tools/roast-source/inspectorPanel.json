@@ -1,0 +1,7 @@
+{
+ "title": "NodeJS Inspector",
+ "toggle": "เปิด/ปิด NodeJS Inspector",
+ "close": "หุบ",
+ "resize": "ย่อขยายแผง NodeJS Inspector",
+ "frameTitle": "NodeJS Inspector"
+}

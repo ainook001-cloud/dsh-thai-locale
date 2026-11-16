@@ -1,0 +1,11 @@
+{
+ "command": "คําสั่ง",
+ "crumbs.aria": "ทางไปโฟลเดอร์",
+ "drill.aria": "เจาะเข้าไปดูโฟลเดอร์",
+ "drill.hint": "เจาะเข้าไปดูโฟลเดอร์",
+ "drill.key": "Tab",
+ "loading": "กําลังโหลด...",
+ "skill": "สกิล",
+ "subagent": "ตัวช่วย",
+ "suggestions.aria": "ทริกเกอร์ที่แนะนํา"
+}

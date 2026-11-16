@@ -1,0 +1,22 @@
+{
+ "action.dislike": "คําตอบมีปัญหาแฮะ",
+ "action.dislikeActive": "เอาคะแนนออก",
+ "action.like": "คําตอบโอเค",
+ "action.likeActive": "เอาคะแนนออก",
+ "category.instruction-following": "เข้าใจคําสั่งแล้วทําตามได้ไหม",
+ "category.other": "อื่น ๆ",
+ "category.product-interaction": "ฟีเจอร์กับการโต้ตอบ",
+ "category.resource-cost": "การใช้ทรัพยากรกับค่าใช้จ่าย",
+ "category.security-privacy-permission": "ความปลอดภัย ความเป็นส่วนตัว สิทธิ์",
+ "category.service-stability": "ความเสถียรกับความเร็ว",
+ "category.task-result": "ผลลัพธ์ที่ได้",
+ "dialog.categories": "หมวดของติชม",
+ "dialog.detail": "รายละเอียดติชม",
+ "dialog.hint": "เล่าให้ละเอียดหน่อยจะช่วยให้ปรับปรุงได้ ที่ส่งไปจะแนบบันทึกบทสนทนาปัจจุบันไปด้วย",
+ "dialog.title": "ส่งติชม",
+ "error.conflict": "ติชมอันนี้ถูกแก้จากที่อื่นแล้ว เลยโชว์สถานะล่าสุดให้",
+ "error.generic": "บันทึกติชมไม่ขึ้น",
+ "error.load": "โหลดสถานะติชมไม่ขึ้น",
+ "error.noteTooLarge": "คําอธิบายยาวไปหน่อย ย่อแล้วส่งใหม่",
+ "toast.recorded": "ขอบคุณที่ติชมนะ"
+}

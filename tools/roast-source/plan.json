@@ -1,0 +1,19 @@
+{
+ "chip.exitFailed": "ออกจากโหมดแผนไม่ขึ้น",
+ "chip.label": "แผน",
+ "chip.on.aria": "โหมดแผนเปิดอยู่ กดปิดได้",
+ "chip.on.title": "โหมดแผนเปิดอยู่ — คลิกปิดได้ (/plan off)",
+ "preview.action": "เปิดดู",
+ "preview.document": "แผน · Markdown",
+ "preview.expired": "ตัวอย่างแผนชั่วคราวหมดอายุแล้ว เปิดใหม่จากบัตรที่รออนุมัติ",
+ "preview.failed": "โหลดแผนไม่ขึ้น",
+ "preview.full": "เปิดแผนแบบเต็ม ๆ",
+ "preview.historyUnavailable": "ประวัติเซสชันยังใช้ไม่ได้",
+ "preview.invalidAddress": "ที่อยู่ของแผนไม่ถูก",
+ "preview.loading": "กําลังลากแผนมา...",
+ "preview.notFound": "หาแผนนี้ไม่เจอ",
+ "preview.open": "เปิดแผนในแถบข้าง",
+ "preview.openNamed": "เปิดแผน: {title}",
+ "preview.title": "แผน",
+ "preview.unavailable": "ตัวอย่างแผนยังใช้ไม่ได้"
+}

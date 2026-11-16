@@ -1,0 +1,14 @@
+{
+ "phase.active": "เป้าที่กําลังลุยอยู่",
+ "phase.active.disarmed": "เป้าที่ปิดสวิตช์ไว้",
+ "phase.paused": "เป้าที่พักไว้ก่อน",
+ "phase.blocked": "เป้าที่ไปต่อไม่ได้",
+ "objective.aria": "อยากได้อะไรจากเป้านี้",
+ "commandInput.aria": "ช่องใส่คําสั่ง",
+ "action.save": "เซฟเป้าไว้",
+ "action.cancel": "เลิกแก้",
+ "action.pause": "พักเป้าก่อน",
+ "action.resume": "ลุยเป้าต่อ",
+ "action.edit": "แก้เป้า",
+ "action.clear": "ล้างเป้าทิ้ง"
+}

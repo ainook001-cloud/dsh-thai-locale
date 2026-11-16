@@ -34,11 +34,15 @@ test('ลงทะเบียน entry เดียวชื่อ dsh-thai-loc
   assert.equal(entry.id, 'dsh-thai-locale');
 });
 
-test('เพิ่มภาษา th พร้อม fallback zh', () => {
+test('เพิ่มภาษา th พร้อม fallback en และ th-roast fallback th', () => {
   const { calls } = boot();
-  assert.equal(calls.langs.length, 1);
-  assert.equal(calls.langs[0].id, 'th');
-  assert.equal(calls.langs[0].fallback, 'zh');
+  assert.equal(calls.langs.length, 2);
+  const th = calls.langs.find((l) => l.id === 'th');
+  const roast = calls.langs.find((l) => l.id === 'th-roast');
+  assert.ok(th, 'th ไม่ถูกเพิ่ม');
+  assert.ok(roast, 'th-roast ไม่ถูกเพิ่ม');
+  assert.equal(th.fallback, 'en');
+  assert.equal(roast.fallback, 'th');
 });
 
 test('ลงทะเบียนทุก namespace', () => {
@@ -46,11 +50,16 @@ test('ลงทะเบียนทุก namespace', () => {
   assert.equal(calls.dicts.length, 75);
 });
 
-test('ทุก namespace มีคีย์ภายใน', () => {
+test('ทุก namespace มีคีย์ไทย และ th-roast ครบทุก namespace', () => {
   const { calls } = boot();
+  let roastCount = 0;
   for (const { ns, d } of calls.dicts) {
     assert.ok(d && d.th && Object.keys(d.th).length > 0, ns + ' ว่าง');
+    assert.ok(d['th-roast'] && Object.keys(d['th-roast']).length > 0, ns + ' ไม่มี th-roast');
+    assert.equal(Object.keys(d['th-roast']).length, Object.keys(d.th).length, ns + ' คีย์ th-roast ไม่ตรง th');
+    roastCount++;
   }
+  assert.equal(roastCount, 75);
 });
 
 test('ตั้ง locale เป็น th', () => {

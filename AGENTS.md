@@ -44,10 +44,11 @@ window.__ModuleLoader__.load({ id: "dsh-thai-locale", factory: () => { /* ... */
 
 ภายใน factory:
 - `const thDicts = { "<namespace>": { "<key>": "<ข้อความไทย>" } }` เก็บคำแปล (ราว 4,600 คีย์ ในราว 75 namespace) นี่คือส่วนที่แก้
-- `apply(ctx)` ใช้ `ctx.locale` (`runtime`) เรียก `addLanguage({ id: "th", label: "ไทย", fallback: "zh" })` (ห่อ try/catch), จากนั้น `runtime.register(ns, { th: dict })` ทุก namespace, แล้ว `runtime.setLocale("th")` ทุกคำสั่งห่อ try/catch โดยตั้งใจ: จุดเดียวล้มเหลวต้องไม่ปิดปลั๊กอินทั้งตัว
+- `const thRoastDicts = { "<namespace>": { "<key>": "<ข้อความกวนตีน>" } }` ชุดภาษาไทยกวนตีน ครบทุก 75 namespace / 4,601 คีย์ เท่า `thDicts` (58 คีย์เขียนด้วยมือ + 4,352 คีย์สร้างด้วยกฎอัตโนมัติ + 191 คีย์อังกฤษ/สัญลักษณ์คงเดิม)
+- `apply(ctx)` ใช้ `ctx.locale` (`runtime`) เรียก `addLanguage({ id: "th", label: "ไทย", fallback: "en" })` แล้วเรียก `addLanguage({ id: "th-roast", label: "ไทย (กวนตีน)", fallback: "th" })` (ห่อ try/catch), จากนั้น `runtime.register(ns, { th: dict, "th-roast": roast })` ทุก 75 namespace, แล้ว `runtime.setLocale("th")` ทุกคำสั่งห่อ try/catch โดยตั้งใจ: จุดเดียวล้มเหลวต้องไม่ปิดปลั๊กอินทั้งตัว
 - `exports.inject = ["locale"]` และ `exports.name = "dsh-thai-locale"` เป็นสิ่งที่ DSH ต้องการ
 
-ลำดับ fallback ตอนรันคือ th → zh → en คีย์ไทยที่ขาดจะแสดงจีนหรืออังกฤษแทน
+ลำดับ fallback ตอนรันคือ `th-roast → th → en` และ `th → en` (ไทยที่ขาดแสดงอังกฤษ ไม่ใช่จีน) — `en` เป็นตัวจบสายบังคับของระบบ DSH ไม่อนุญาตให้มี zh ต่อจาก en
 
 ## กฎการแก้คำแปล
 

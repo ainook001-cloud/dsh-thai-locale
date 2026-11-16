@@ -10,7 +10,8 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const file = process.argv[2] || path.join(root, "lib", "client.js");
 const src = fs.readFileSync(file, "utf8");
 
-// พจนานุกรมคือออบเจ็กต์ JSON ระหว่าง "const thDicts = " กับท้ายของ wrapper
+// พจนานุกรมคือออบเจ็กต์ JSON ระหว่าง "const NAME = " กับท้ายของ wrapper
+// แยกทั้ง thDicts และ thRoastDicts (ถ้ามี) เพื่อรองรับภาษาไทยกวนตีน
 const startMarker = "const thDicts = ";
 const endMarker = "\nfunction apply(ctx)";
 const start = src.indexOf(startMarker);
@@ -19,7 +20,46 @@ if (start < 0 || end < 0) {
   console.error("หาบล็อก thDicts ไม่เจอใน", file);
   process.exit(2);
 }
-const dicts = JSON.parse(src.slice(start + startMarker.length, end).replace(/[;\s]+$/, ""));
+// สร้าง dicts รวม: thDicts ตามด้วย thRoastDicts (ค่าเดียวกับ thDicts จะซ้ำข้ามได้)
+const dicts = {};
+
+// Parse thDicts
+const thStart = src.indexOf("{", start + startMarker.length);
+let depth = 0, q = "", esc = false, thEnd = -1;
+for (let i = thStart; i < end; i++) {
+  const c = src[i];
+  if (q) { if (esc) esc = false; else if (c === "\\") esc = true; else if (c === q) q = ""; continue; }
+  if (c === '"' || c === "'" || c === "`") { q = c; continue; }
+  if (c === "{") depth++;
+  else if (c === "}" && --depth === 0) { thEnd = i + 1; break; }
+}
+if (thEnd < 0) { console.error("หาโครงสร้าง thDicts ไม่เจอใน", file); process.exit(2); }
+const thDictsObj = JSON.parse(src.slice(thStart, thEnd).replace(/[;\s]+$/, ""));
+Object.assign(dicts, thDictsObj);
+
+// Parse thRoastDicts (ถ้ามี) — อยู่หลัง thDicts ก่อน function apply
+const roastMarker = "const thRoastDicts = ";
+const roastIdx = src.indexOf(roastMarker);
+if (roastIdx >= 0 && roastIdx < end) {
+  const rsStart = src.indexOf("{", roastIdx + roastMarker.length);
+  let rd = 0, rq = "", resc = false, rEnd = -1;
+  for (let i = rsStart; i < end; i++) {
+    const c = src[i];
+    if (rq) { if (resc) resc = false; else if (c === "\\") resc = true; else if (c === rq) rq = ""; continue; }
+    if (c === '"' || c === "'" || c === "`") { rq = c; continue; }
+    if (c === "{") rd++;
+    else if (c === "}" && --rd === 0) { rEnd = i + 1; break; }
+  }
+  if (rEnd >= 0) {
+    try {
+      const roastObj = JSON.parse(src.slice(rsStart, rEnd).replace(/[;\s]+$/, ""));
+      for (const [ns, o] of Object.entries(roastObj)) {
+        if (!dicts[ns]) dicts[ns] = {};
+        Object.assign(dicts[ns], o);
+      }
+    } catch { /* thRoastDicts parse ไม่ได้ ข้ามไป */ }
+  }
+}
 
 const THAI = /[\u0E00-\u0E7F]/;
 const LAO = /[\u0E80-\u0EFF]/;          // อักษรลาวที่หน้าตาคล้ายไทย: ต้นเหตุความเสียหายที่พบบ่อย

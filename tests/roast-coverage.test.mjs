@@ -16,17 +16,16 @@ test('ไฟล์ต้นทางที่เขียนแล้ว ต้�
   assert.deepEqual(unknown, [], 'ไฟล์ต้นทางที่ไม่มี namespace รองรับ: ' + unknown.join(', '));
 });
 
-test('ไฟล์ต้นทางมีคีย์ตรงกับไทยธรรมดาทุกคีย์', () => {
+// ไฟล์ต้นทางเป็นบางส่วนได้โดยตั้งใจ: คีย์ที่ยังไม่เขียนจะ fallback ไปไทยธรรมดา
+// ที่ต้องกันคือ "คีย์เกิน" (พิมพ์ผิด/คีย์ที่ไม่มีจริง) เพราะจะทำให้บล็อกมีคีย์ขยะ
+test('ไฟล์ต้นทางมีแต่คีย์ที่มีจริงในไทยธรรมดา', () => {
   const problems = [];
   for (const ns of Object.keys(th)) {
     const file = join(sourceDir, ns + '.json');
     if (!existsSync(file)) continue;
     const entries = JSON.parse(readFileSync(file, 'utf8'));
-    const thaiKeys = Object.keys(th[ns]);
     const extra = Object.keys(entries).filter((k) => !(k in th[ns]));
-    const missing = thaiKeys.filter((k) => !(k in entries));
-    if (missing.length) problems.push(`${ns}: ขาด ${missing.length} คีย์`);
-    if (extra.length) problems.push(`${ns}: เกิน ${extra.length} คีย์`);
+    if (extra.length) problems.push(`${ns}: คีย์เกิน ${extra.length} ตัว เช่น ${extra.slice(0, 3).join(', ')}`);
   }
   assert.deepEqual(problems, []);
 });

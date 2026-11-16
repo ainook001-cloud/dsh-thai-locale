@@ -35,6 +35,7 @@ const files = fs
 
 const roast = {};
 const problems = [];
+const pending = [];
 let filled = 0;
 
 for (const file of files) {
@@ -71,7 +72,7 @@ for (const file of files) {
     filled++;
   }
   const missing = thaiKeys.filter((k) => !(k in out));
-  if (missing.length) problems.push(file + ": ขาด " + missing.length + " คีย์ เช่น " + missing.slice(0, 3).join(", "));
+  if (missing.length) pending.push(file + ": ยังไม่เขียน " + missing.length + " คีย์");
   // คีย์ที่ยังไม่ได้เขียน "ไม่ต้องใส่" — runtime จะ fallback th-roast → th เอง
   // ทำให้ไฟล์เล็กลงและไม่ต้องก๊อปข้อความไทยซ้ำ
   roast[ns] = out;
@@ -79,7 +80,7 @@ for (const file of files) {
 
 // namespace ที่ยังไม่มีไฟล์เลย ข้ามไป (fallback ไปไทยธรรมดา) ไม่ต้องใส่ค่าซ้ำ
 const absent = nsList.filter((ns) => !roast[ns]);
-if (absent.length) problems.push("ยังไม่มีไฟล์ต้นทาง " + absent.length + " namespace: " + absent.slice(0, 6).join(", "));
+if (absent.length) pending.push("ยังไม่มีไฟล์ต้นทาง " + absent.length + " namespace: " + absent.slice(0, 6).join(", "));
 
 const ordered = {};
 for (const ns of nsList) if (roast[ns]) ordered[ns] = roast[ns];
@@ -89,6 +90,12 @@ if (problems.length) {
   console.log("พบปัญหา " + problems.length + " รายการ:");
   for (const p of problems.slice(0, 40)) console.log("  - " + p);
   if (problems.length > 40) console.log("  ... และอีก " + (problems.length - 40) + " รายการ");
+}
+
+
+if (pending.length) {
+  console.log("ยังไม่ได้เขียน:");
+  for (const p of pending.slice(0, 6)) console.log("  - " + p);
 }
 
 if (args.has("--check")) {

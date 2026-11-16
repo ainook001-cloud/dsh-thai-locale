@@ -1,0 +1,20 @@
+{
+ "run.title": "{name}",
+ "run.members.one": "{count} คน",
+ "run.members.other": "{count} คน",
+ "run.empty": "ยังไม่มีใครเริ่มทํางานเลย",
+ "phase.unassigned": "ยังไม่ระบุช่วง",
+ "phase.empty": "ชื่อช่วงว่างเปล่า",
+ "statusCount.running": "ขยับอยู่ {count}",
+ "statusCount.completed": "จบแล้ว {count}",
+ "statusCount.failed": "พังไป {count}",
+ "statusCount.cancelled": "โดนปิด {count}",
+ "statusCount.interrupted": "โดนตัดกลางคัน {count}",
+ "member.empty": "ชื่อคนว่างเปล่า",
+ "member.open": "เปิด {name} ขึ้นมา",
+ "status.running": "ขยับอยู่",
+ "status.completed": "จบแล้ว",
+ "status.failed": "พังไปแล้ว",
+ "status.cancelled": "โดนปิดไปแล้ว",
+ "status.interrupted": "โดนตัดกลางคัน"
+}

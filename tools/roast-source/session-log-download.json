@@ -1,0 +1,12 @@
+{
+ "header.more": "สั่งงานเพิ่ม",
+ "menu.download": "โหลดบันทึกเซสชันลงมา",
+ "menu.feedback": "ติชม",
+ "dialog.preparingTitle": "กําลังแพ็กเซสชันออกมา",
+ "dialog.preparingDescription": "กําลังเตรียม ZIP ที่มีเซสชันนี้ เซสชันย่อย แล้วก็ไฟล์แนบ",
+ "dialog.successTitle": "เริ่มโหลดเซสชันแล้ว",
+ "dialog.successDescription": "เบราว์เซอร์กําลังโหลด ZIP ของเซสชันอยู่",
+ "dialog.errorTitle": "แพ็กเซสชันออกไม่ขึ้น",
+ "dialog.close": "ปิดไป",
+ "dialog.commandFailed": "เริ่มแพ็กเซสชันไม่ได้"
+}

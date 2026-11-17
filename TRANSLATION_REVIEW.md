@@ -226,15 +226,15 @@
 - `pluginManager.statusMissingFiles`  
   แพ็กเกจไม่พร้อมใช้
 - `pluginManager.installGithubTimeoutTitle`  
-  เกินเวลาอย่างที่ GitHub
+  GitHub ใช้เวลานานเกินกำหนด
 - `pluginManager.installUseGithubMirror`  
-  ใช้มิเรอร์ในจีน
+  ใช้มิร์เรอร์ในจีน
 - `pluginManager.installAwaitingAcceptance`  
   รอ Host ยอมรับการติดตั้ง การยกเลิกจะลองใหม่อัตโนมัติตามการยืนยัน
 - `pluginManager.installBackgroundApplying`  
   กำลังนำการติดตั้งไปใช้ ยกเลิกไม่ได้ ดูความคืบหน้าการติดตั้ง
 - `pluginManager.installStarting`  
-  กำลังเตรียืมติดตั้ง…
+  กำลังเตรียมติดตั้ง…
 - `pluginManager.installCancelled`  
   ยกเลิกการติดตั้งแล้ว ปลั๊กอินยังไม่ได้ใช้งาน และอาจเหลือไฟล์ที่ดาวน์โหลด
 - `pluginManager.installFailureNetwork`  
@@ -242,7 +242,7 @@
 - `pluginManager.installFailureNetworkHost`  
   ถึง {host} ไม่ได้: แอดเดรส GitHub หรือลิงก์ .tgz ไม่ผ่าน registry เครื่องนี้ต้องถึงโดยตรงหรือผ่าน proxy ถ้าปลั๊กอินนี้มีบน npm ด้วย ให้กรอกชื่อแพ็กเกจแทน
 - `pluginManager.installFailureDiskFull`  
-  พื้นทีแว่นเต็ม ยุติการติดตั้ง
+  พื้นที่ว่างเต็ม ยุติการติดตั้ง
 - `pluginManager.installFailurePermission`  
   ไม่มีสิทธิ์เขียน จึงติดตั้งปลั๊กอินไม่ได้
 - `pluginManager.installFailureBuildBlockedManual`  

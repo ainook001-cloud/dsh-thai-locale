@@ -26,5 +26,9 @@
  "codeTitle": "บล็อกโค้ด",
  "wrap": "ตัดบรรทัดให้",
  "unwrap": "อย่าไปตัดบรรทัด",
- "footnotes": "เชิงอรรถ"
+ "footnotes": "เชิงอรรถ",
+ "google": "Google",
+ "bing": "Bing",
+ "deepseekAccount": "DeepSeek Flash — บัญชี (เสียเงิน)",
+ "deepseekOfficial": "DeepSeek Flash — Official API (เสียเงิน)"
 }

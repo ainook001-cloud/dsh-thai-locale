@@ -20,5 +20,10 @@
  "saving": "กําลังเซฟ...",
  "saveFailed": "ระบบไม่รับค่าพวกนี้ ค่าเดิมยังอยู่ ลองแก้ดู",
  "invalidNumber": "ใส่ตัวเลข หรือปล่อยว่างก็ได้ เดี๋ยวใช้ค่าเริ่มต้น",
- "invalidCount": "ใส่จํานวนเต็ม 1 ถึง 50 หรือปล่อยว่างเพื่อใช้ค่าตั้งต้น"
+ "invalidCount": "ใส่จํานวนเต็ม 1 ถึง 50 หรือปล่อยว่างเพื่อใช้ค่าตั้งต้น",
+ "searchGuideUrl": "https://api-docs.deepseek.com/guides/search",
+ "apiKey": "API key",
+ "baseUrl": "Messages API base URL",
+ "searchApiBaseUrl": "Search / Fetch API base URL",
+ "title": "ค้นหาเว็บ"
 }

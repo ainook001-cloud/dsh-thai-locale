@@ -31,5 +31,9 @@
  "configuration": "การตั้งค่า",
  "runtime": "สถานะ",
  "unobserved": "ไม่ได้รันอยู่",
- "pending": "รอ dependencies"
+ "pending": "รอ dependencies",
+ "loadingPhase": "กําลังโหลดอยู่",
+ "active": "ขยับอยู่",
+ "failed": "เริ่มไม่ขึ้น",
+ "unloading": "กําลังถอดโหลด"
 }

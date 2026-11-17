@@ -131,5 +131,6 @@
  "onboardingLater": "ตั้งทีหลัง",
  "onboardingSave": "เซฟแล้วไปต่อ",
  "onboardingSaving": "กําลังเซฟ...",
- "keyRequired": "ใส่ API key ก่อนถึงจะไปต่อ"
+ "keyRequired": "ใส่ API key ก่อนถึงจะไปต่อ",
+ "deepSeekAccount": "บัญชี DeepSeek"
 }

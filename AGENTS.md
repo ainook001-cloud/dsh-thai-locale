@@ -18,6 +18,8 @@
 | `icon.svg` | ไอคอนปลั๊กอิน: ธงชาติไทย สร้างด้วย `tools/generate-icon.py` (Python 3, ไม่บังคับ) |
 | `NOTICE` | การระบุที่มาของเนื้อหาที่มาจาก DeepSeek Harness (MIT) เก็บไว้เมื่อเปลี่ยนข้อความสัญญาอนุญาต |
 | `tools/check-translations.mjs` | ตัวตรวจแบบไม่พึ่ง dependency หารูปแบบความเสียหาย รันด้วย `node tools/check-translations.mjs` (หรือ `npm run check`) |
+| `tools/check-roast.mjs` | ตรวจคุณภาพชุดกวน (placeholder, อักษรต้องห้าม, คําท้ายซ้ํา, ความยาว) |
+| `tools/check-coverage.mjs` | ตรวจ coverage 3 ทาง: `th` กับ `th-roast`, เทียบซอร์ส `zh`/`en` ของแพ็กเกจเอนจิน, จับคีย์ที่ไม่มีต้นทาง |
 | `TRANSLATION_REVIEW.md` | รายการข้อความที่น่าสงสัยว่าอาจยังพิมพ์ผิด |
 | `TRANSLATION_STATUS.md` | สถานะการตรวจคำแปล 178 รายการ (pending / reviewed / wontfix) |
 | `VERSIONING.md` | กฎการขึ้นเลขเวอร์ชัน (major / minor / patch / เลขตัวที่สี่) |
@@ -69,6 +71,8 @@ window.__ModuleLoader__.load({ id: "dsh-thai-locale", factory: () => { /* ... */
 ```bash
 node --check lib/client.js     # ไวยากรณ์
 node tools/check-translations.mjs   # ตัวตรวจคําแปล ต้องรายงานข้อผิดพลาด: 0
+node tools/check-roast.mjs          # ตรวจคุณภาพชุดกวน ต้องรายงานข้อผิดพลาด: 0
+node tools/check-coverage.mjs       # ตรวจ coverage เทียบซอร์ส ต้องรายงานข้อผิดพลาด: 0
 node tools/install-plugin-cards.mjs  # ติดตั้งการ์ดปลั๊กอิน
 node tools/install-plugin-ui.mjs     # แปะคำแปล UI
 ```

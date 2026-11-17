@@ -67,7 +67,7 @@
 | 28 | `dsh-opencode-patch.endpointHint` | `pending` | ไม่ | `เลือกตระกูลเอนด์พอยต์ที่จะส่งคำขอไป อัตโนมัติตามที่อยู่แคตตาล็อกของเกตเวย์เอง อีกสองตัวเลือกบังคับเลือกเอง ตระกูลเก่าและใหม่มีสิทธิ์แยกกันและตอบทั้งคู่ เลือกอันที่บัญชีของคุณใช้งานได้จริง` |
 | 29 | `dsh-opencode-patch.storeInspectOrg` | `pending` | ไม่ | `องค์กร` |
 | 30 | `dsh-opencode-patch.purgeCatalogUnread` | `pending` | ไม่ | `ไม่ได้ลบอะไร แต่อ่านแคตตาล็อกไม่ได้ — ลองใหม่เมื่อออนไลน์` |
-| 31 | `dsh-opencode-patch.usageSummaryNote` | `pending` | ใช่ | `OpenCode เผยแพร่เป็นเปอร์เซ็นต์ต่อช่วงเวลาและไม่มีตัวเลขยอดคงเหลือ ดังนั้น \"เหลือ\" คือส่วนต่างของเปอร์เซ็นต์เดียวกัน — ไม่ใช่ตัวเลขเงิน แผน tier ก็หาไม่ได้เช่นกัน` |
+| 70 | `dsh-opencode-patch.usageSummaryNote` | `pending` | ใช่ | `OpenCode เผยแพร่เป็นเปอร์เซ็นต์ต่อช่วงเวลาและไม่มีตัวเลขยอดคงเหลือ ดังนั้น "เหลือ" คือส่วนต่างของเปอร์เซ็นต์เดียวกัน — ไม่ใช่ตัวเลขเงิน แผน tier ก็หาไม่ได้เช่นกัน` |
 | 32 | `dsh-opencode-patch.usageOverflowBilling` | `pending` | ไม่ | `ค่าใช้จ่ายเซสชันแบ่งตามที่แต่ละเทิร์นรัน: คำขอแผน Go หักจากโควต้า Go คำขอ Zen หักจากยอด Zen เมื่อแผน Go ล้น เกตเวย์จะหักส่วนล้นไปที่ Zen — OpenCode ไม่เผยแพร่สัดส่วนในโควต้ากับส่วนเกิน` |
 | 33 | `voice-input.setup.estimateNote` | `pending` | ไม่ | `นี่เป็นเพียงการประมาณ เครือข่ายช้าอาจใช้เวลานานกว่า ไฟล์ที่ดาวน์โหลดแล้วจะถูกใช้ซ้ำ โมเดลที่ไม่ได้ใช้งานจะคืนหน่วยความจำโดยอัตโนมัติ` |
 | 34 | `voice-input.downloadAdvice.certificate` | `pending` | ไม่ | `ตรวจสอบนาฬิกาของระบบ ใบรับรองที่เชื่อถือได้ และพร็อกซีของเครื่องที่รัน DSH แล้วลองใหม่` |
@@ -145,16 +145,16 @@
 | 106 | `pluginManager.installProblemInstalled` | `pending` | ใช่ | `ปลั๊กอินนี้ติดตั้งแล้ว ถ้าต้องการอัปเดตเวอร์ชัน ให้ถอดถอนแล้วติดตั้งใหม่อีกครั้ง` |
 | 107 | `pluginManager.installProblemShipped` | `pending` | ใช่ | `ปลั๊กอินนี้มากับ DSH; อัปเดต DSH จะอัปเดตให้เอง` |
 | 108 | `pluginManager.statusMissingFiles` | `pending` | ใช่ | `แพ็กเกจไม่พร้อมใช้` |
-| 109 | `pluginManager.installGithubTimeoutTitle` | `pending` | ใช่ | `เกินเวลาอย่างที่ GitHub` |
-| 110 | `pluginManager.installUseGithubMirror` | `pending` | ไม่ | `ใช้ ิร์เรอรใ์ นจีน` |
+| 148 | `pluginManager.installGithubTimeoutTitle` | `pending` | ใช่ | `GitHub ใช้เวลานานเกินกำหนด` |
+| 149 | `pluginManager.installUseGithubMirror` | `pending` | ไม่ | `ใช้มิร์เรอร์ในจีน` |
 | 111 | `pluginManager.installAwaitingAcceptance` | `pending` | ไม่ | `รอ Host ยอมรับการติดตั้ง การยกเลิกจะลองใหม่อัตโนมัติตามการยืนยัน` |
 | 112 | `pluginManager.installBackgroundApplying` | `pending` | ใช่ | `กำลังนำการติดตั้งไปใช้ ยกเลิกไม่ได้ ดูความคืบหน้าการติดตั้ง` |
-| 113 | `pluginManager.installStarting` | `pending` | ไม่ | `กำลังเตรียืมติดตั้ง…` |
+| 152 | `pluginManager.installStarting` | `pending` | ไม่ | `กำลังเตรียมติดตั้ง…` |
 | 114 | `pluginManager.installCancelled` | `pending` | ใช่ | `ยกเลิกการติดตั้งแล้ว ปลั๊กอินยังไม่ได้ใช้งาน และอาจเหลือไฟล์ที่ดาวน์โหลด` |
 | 115 | `pluginManager.installFailureNetwork` | `pending` | ใช่ | `การเชื่อมต่อเครือข่ายล้มเหลว` |
 | 116 | `pluginManager.installFailureNetworkHost` | `pending` | ใช่ | `ถึง {host} ไม่ได้: แอดเดรส GitHub หรือลิงก์ .tgz ไม่ผ่าน registry เครื่องนี้ต้องถึงโดยตรงหรือผ่าน proxy ถ้าปลั๊กอินนี้มีบน npm ด้วย ให้กรอกชื่อแพ็กเกจแทน` |
-| 117 | `pluginManager.installFailureDiskFull` | `pending` | ไม่ | `พื้นทีแว่นเต็ม ยุติการติดตั้ง` |
-| 118 | `pluginManager.installFailurePermission` | `pending` | ไม่ | `ไม่มสี ิทธิ์เขียน จึงติดตั้งปลั๊กอินไม่ได้` |
+| 156 | `pluginManager.installFailureDiskFull` | `pending` | ไม่ | `พื้นที่ว่างเต็ม ยุติการติดตั้ง` |
+| 157 | `pluginManager.installFailurePermission` | `pending` | ไม่ | `ไม่มีสิทธิ์เขียน จึงติดตั้งปลั๊กอินไม่ได้` |
 | 119 | `pluginManager.installFailureBuildBlockedManual` | `pending` | ใช่ | `pnpm บล็อกสคริปต์ติดตั้ง อนุญาตใน allowBuilds ของ pnpm-workspace.yaml แล้วลองใหม่` |
 | 120 | `pluginManager.installFailureIntegrity` | `pending` | ใช่ | `แพ็กเกจที่ดาวน์โหลดไม่ผ่านการตรวจสอบความสมบูรณ์` |
 | 121 | `pluginManager.terminalFailed` | `pending` | ใช่ | `ล้มเหลว` |

@@ -23,8 +23,8 @@ I translated the interface strings; the strings themselves come from DSH.
 - 4,601 UI strings across 75 namespaces — chat, settings, plugins, permissions,
   schedules, terminal, voice input and the rest
 - Registers the `th` locale; the plugin switches to Thai on install
-- Falls back to `zh` then `en` when a key is missing, so you get Chinese or English
-  rather than an empty label
+- Falls back to `en` (and `th` for the `th-roast` locale) when a key is missing, so you get
+  English rather than an empty label
 - Tested on DSH Web with 0.2.1-rc.2. DSH Desktop runs the same Web UI, so it should
   work there too — I have not installed it on Desktop to confirm
 
@@ -78,7 +78,7 @@ node tools/install-plugin-locales.mjs
   correct; the file exists because a heuristic flagged them.
 - **Market plugin descriptions: 57 of 5,324 translated.** Categories, market name and
   description are done.
-- Some UI text may still show Chinese or English through the `th → zh → en` fallback.
+- Some UI text may still show Chinese or English through the `th → en` / `th-roast → th → en` fallback.
 
 ## Where this is posted
 
@@ -90,7 +90,7 @@ translation review) and the **Awesome DeepSeek Harness** list.
 
 - Repo: https://github.com/ainook001-cloud/dsh-thai-locale
 - Releases: https://github.com/ainook001-cloud/dsh-thai-locale/releases
-- Changelog: see the release notes (1.0.0 → 1.0.6)
+- Changelog: see the release notes (1.0.0 → 1.5.1)
 
 ## Unofficial
 

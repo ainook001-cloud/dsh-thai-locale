@@ -3,11 +3,11 @@
 บันทึกการเปลี่ยนแปลงของ dsh-thai-locale เรียงจากใหม่ไปเก่า
 รูปแบบเลขเวอร์ชันดูที่ [VERSIONING.md](VERSIONING.md)
 
-## ยังไม่ปล่อย — หลัง v1.5.0 (commit `d80a94e`)
+## 1.5.1 — งาน COMPLETE-ALL (release แล้ว)
 
-งาน COMPLETE-ALL ยังไม่ push และยังไม่สร้าง release
+ตรวจคุณภาพคำแปล ไม่ได้เพิ่มคำแปลใหม่
 
-**เพิ่มเครื่องมือ**
+**เครื่องมือใหม่**
 - `tools/check-coverage.mjs` — ตรวจความสอดคล้อง 3 ทาง: `th` กับ `th-roast`, เทียบกับซอร์ส `zh`/`en` ของแพ็กเกจเอนจิ้น, และจับคีย์ที่ไม่มีต้นทาง
 
 **แก้ตามผลตรวจปลาทองและผลตรวจ P5**
@@ -15,17 +15,17 @@
 - `TRANSLATION_STATUS.md` — sync 6 แถวที่อ้างข้อความเก่า เช่น `เกินเวลาอย่างที่ GitHub` → `GitHub ใช้เวลานานเกินกำหนด`
 - `AGENTS.md` — แก้ข้อความที่อ้างผิดว่า 196 การ์ด = "ทดลอง + หลัก + ที่ติดตั้งเอง" ของจริงคือ 192 ตัวจาก `@deepseek-ai` บวก 4 ตัวนอกขอบเขต และปลั๊กอินทดลอง 22 ตัวไม่อยู่ในไฟล์นั้น
 
-**P1 ตรวจคําแปล 178 รายการ** (ถูกอยู่แล้ว 170 · แก้ 8)
+**P1 ตรวจคำแปล 178 รายการ** (ถูกอยู่แล้ว 170 · แก้ 8)
 - `command.description.compact` — "ที่เก่ากว่า" → "ที่เก่า" (ต้นทางไม่มีตัวเทียบ)
 - `pluginManager.restartReasonHostModule` — เติมกริยาที่ขาด
 - `pluginManager.restartReasonModuleComparison` — ระบุว่าเทียบกับไฟล์บนดิสก์
-- `pluginManager.registryLegend` — ตัดคําซ้ําความ
+- `pluginManager.registryLegend` — ตัดคำซ้ำความ
 - `pluginManager.reasonNotRemovable` — แก้อนุประโยคที่ความหมายเพี้ยน
 - `settings.anyBg.uiProduced` — "โปรดักชัน" → "ผลงานที่ได้" (ผิดบริบทป้ายโซน UI)
-- `settings.anyBg.descColor` — เลี่ยงคําโรมันปน
+- `settings.anyBg.descColor` — เลี่ยงคำโรมันปน
 - `thinking-api.intro` — "ด้วยบทบาท" → "เพราะบทบาท"
 
-**ปรับชุดกวนตามคําแปลที่แก้** — 4 คีย์ใน `tools/roast-source/pluginManager.json` และ `thinking-api.json` ให้ตรงความหมายใหม่
+**ปรับชุดกวนตามคำแปลที่แก้** — 4 คีย์ใน `tools/roast-source/pluginManager.json` และ `thinking-api.json` ให้ตรงความหมายใหม่
 
 ## 1.5.0
 

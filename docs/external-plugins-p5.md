@@ -401,12 +401,12 @@ equal true
 // locale/en.json
 { "meta": {
   "title": "dsh-thai-locale",
-  "description": "Thai UI locale for DSH Web: registers the locale `th` (fallback th → zh → en) and Thai dictionaries for every built-in client namespace." } }
+  "description": "Thai UI locale for DSH Web: registers the locales `th` and `th-roast` (fallback th → en, th-roast → th → en) and Thai dictionaries for every built-in client namespace." } }
 
 // locale/th.json
 { "meta": {
   "title": "ปลั๊กอินภาษาไทย",
-  "description": "ชุดภาษาไทยสําหรับ DSH Web — ลงทะเบียนภาษา th (fallback th → zh → en) และคําแปลไทยสําหรับ namespace ของ client ที่มีมาให้" } }
+  "description": "ชุดภาษาไทยสําหรับ DSH Web — ลงทะเบียนภาษา th และ th-roast (fallback th → en, th-roast → th → en) และคําแปลไทยสําหรับ namespace ของ client ที่มีมาให้" } }
 ```
 
 รูปแบบชื่อไม่เหมือนกัน: ไฟล์อังกฤษใช้ชื่อแพ็กเกจ `dsh-thai-locale` ไฟล์ไทยใช้ชื่อที่คนอ่านเข้าใจ `ปลั๊กอินภาษาไทย` ผมคิดว่าแบบนี้ใช้ได้และอ่านง่ายกว่า เพราะผู้ใช้ที่เห็นชื่อไทยจะรู้ทันทีว่าปลั๊กอินนี้ทำอะไร ส่วนคนที่เปิดไฟล์อังกฤษมักเป็นนักพัฒนาที่ต้องการชื่อแพ็กเกจจริงเพื่อไปค้น npm — แต่ถ้าจะให้สม่ำเสมอ ควรเขียนกำกับไว้ในไฟล์ใดไฟล์หนึ่งว่าเจตนาให้ต่างกัน ไม่ใช่ความพลาด

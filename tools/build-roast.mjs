@@ -73,6 +73,13 @@ for (const file of files) {
   }
   const missing = thaiKeys.filter((k) => !(k in out));
   if (missing.length) pending.push(file + ": ยังไม่เขียน " + missing.length + " คีย์");
+  // ลบคีย์ที่ค่าเหมือนไทยเดิม (out[k] === th[ns][k]) ออก —
+  // ให้ runtime fallback th-roast → th แทนการเก็บค่าซ้ำ เพื่อลดขนาดและเวลา re-render
+  let dupRemoved = 0;
+  for (const k of Object.keys(out)) {
+    if (out[k] === th[ns][k]) { delete out[k]; dupRemoved++; }
+  }
+  if (dupRemoved) filled -= dupRemoved;
   // คีย์ที่ยังไม่ได้เขียน "ไม่ต้องใส่" — runtime จะ fallback th-roast → th เอง
   // ทำให้ไฟล์เล็กลงและไม่ต้องก๊อปข้อความไทยซ้ำ
   roast[ns] = out;

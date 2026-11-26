@@ -29,6 +29,7 @@ const warnings = [];
 let total = 0;
 let changed = 0;
 let pending = 0;
+let fallbackCount = 0;
 
 for (const ns of Object.keys(th)) {
   const bag = roast[ns];
@@ -38,7 +39,7 @@ for (const ns of Object.keys(th)) {
     const id = `${ns}.${key}`;
     const base = th[ns][key];
     const value = bag[key];
-    if (value === undefined) { pending++; continue; }
+    if (value === undefined) { fallbackCount++; continue; }
     if (typeof value !== "string") { errors.push(`${id}: ค่าไม่ใช่สตริง`); continue; }
     if (CJK.test(value)) errors.push(`${id}: CJK มีอักษรจีน/ญี่ปุ่น`);
     if (LAO.test(value)) errors.push(`${id}: LAO มีอักษรลาว`);
@@ -62,7 +63,7 @@ for (const ns of Object.keys(th)) {
 }
 
 const same = total - changed;
-console.log(`ตรวจชุดกวน ${total} คีย์ใน ${path.relative(root, file)} — เขียนแล้ว ${changed} คีย์, คงเดิม ${same}, ยังไม่เขียน ${pending} (fallback ไปไทยธรรมดา)`);
+console.log(`ตรวจชุดกวน ${total} คีย์ใน ${path.relative(root, file)} — เขียนแล้ว ${changed} คีย์, คงเดิม ${same}, fallback ไปไทย ${fallbackCount}, ยังไม่เขียน ${pending}`);
 console.log(`ข้อผิดพลาด: ${errors.length}`);
 for (const e of errors.slice(0, 40)) console.log("  ERROR  " + e);
 if (errors.length > 40) console.log(`  ... และอีก ${errors.length - 40} รายการ`);

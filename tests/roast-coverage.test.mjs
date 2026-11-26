@@ -52,6 +52,8 @@ test('บล็อก thRoastDicts ที่สร้างแล้วตรง
     if (!existsSync(file)) continue;
     const entries = JSON.parse(readFileSync(file, 'utf8'));
     for (const key of Object.keys(entries)) {
+      // คีย์ที่ค่าเท่าไทยเดิมถูก build ลบทิ้งเพื่อ fallback ไป th — ข้าม
+      if (entries[key] === th[ns]?.[key]) continue;
       if (roast[ns]?.[key] !== entries[key]) problems.push(`${ns}.${key}`);
     }
   }

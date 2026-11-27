@@ -25,9 +25,9 @@
 | `VERSIONING.md` | กฎการขึ้นเลขเวอร์ชัน (major / minor / patch / เลขตัวที่สี่) |
 | `tests/client-plugin.test.mjs` | รัน `lib/client.js` จริงใน vm sandbox — รันด้วย `node --test tests/*.test.mjs` |
 | `tools/install-plugin-locales.mjs` | เขียน `th.json` ของปลั๊กอินทดลองเข้าโฟลเดอร์เอนจิน (เขียนทับถ้ามีอยู่) |
-| `tools/install-plugin-cards.mjs` | เขียน `th.json` ของการ์ดปลั๊กอิน 196 แพ็กเกจ — อ่านจาก `plugin-locales/cards/th.txt` เท่านั้น (192 ตัวจาก `@deepseek-ai` บวก 4 ตัวนอกขอบเขต) **ไม่ได้แตะ `plugin-locales/experimental/`** ซึ่งมีสคริปต์แยกคือ `tools/install-plugin-locales.mjs` |
+| `tools/install-plugin-cards.mjs` | เขียน `th.json` ของการ์ดปลั๊กอิน **229 แพ็กเกจ** — อ่านจาก `plugin-locales/cards/th.txt` เท่านั้น (196 ตัวเดิม + 33 ตัวที่เพิ่มภายหลัง) **ไม่ได้แตะ `plugin-locales/experimental/`** ซึ่งมีสคริปต์แยกคือ `tools/install-plugin-locales.mjs` |
 | `tools/install-plugin-ui.mjs` | แปะคำแปลไทยลงข้อความ UI ของปลั๊กอิน 9 ตัว (แทนสตริงตรงตัว สำรอง .th-bak) |
-| `plugin-locales/cards/th.txt` | ชื่อ+คําอธิบายปลั๊กอิน 196 แพ็กเกจ (TAB คั่น 3 คอลัมน์) — องค์ประกอบจริงคือ 192 ตัวจาก `@deepseek-ai` บวก 4 ตัวที่ไม่ได้ขึ้นขอบเขต; **ปลั๊กอินทดลอง 22 ตัวไม่อยู่ในไฟล์นี้** |
+| `plugin-locales/cards/th.txt` | ชื่อ+คำอธิบายปลั๊กอิน **229 แพ็กเกจ** (TAB คั่น 3 คอลัมน์) — 196 ตัวแรกเป็น 192 จาก `@deepseek-ai` + 4 ตัวนอกขอบเขต, อีก 33 ตัวเพิ่มมาทีหลังให้ครบทุกปลั๊กอินที่ติดตั้ง; **ปลั๊กอินทดลอง 22 ตัวไม่อยู่ในไฟล์นี้** |
 | `plugin-locales/ui/*.json` | คำแปลข้อความ UI แยกไฟล์ต่อปลั๊กอิน |
 | `plugin-locales/dict/*.txt` | พจนานุกรมไทยของปลั๊กอินที่ใช้ระบบภาษาเอง (our-free-model, amd-free-model) |
 | `tools/build-translation-review.mjs` | สร้าง `TRANSLATION_REVIEW.md` ใหม่จากค่าจริงใน `lib/client.js` |

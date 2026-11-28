@@ -3,6 +3,22 @@
 บันทึกการเปลี่ยนแปลงของ dsh-thai-locale เรียงจากใหม่ไปเก่า
 รูปแบบเลขเวอร์ชันดูที่ [VERSIONING.md](VERSIONING.md)
 
+## 1.6.0 — แปล UI ข้างในปลั๊กอิน 379 ข้อความ
+
+**UI ของปลั๊กอินเอง: 624 → 1,003 คีย์ (15 ไฟล์)**
+
+| ปลั๊กอิน | ข้อความ |
+|---|---|
+| `dsh-ppt-master` | 299 (คำอธิบายเครื่องมือ + พารามิเตอร์ + ข้อความแจ้งเมื่อ dependency ขาด) |
+| `@cccuuuhhh/dsh-skill-groups` | 28 (ข้อความผลลัพธ์ /skillset) |
+| `@jiuling/dsh-mcp-manager` | 25 (ป้ายตั้งค่า + HTTP error) |
+| `dsh-humanizer` | 19 (ป้ายผล, config, tool description) |
+| `dsh-logicprobe` | 8 (สวิตช์ Gate) |
+
+**ตั้งใจไม่แปล**: system prompt 16 ข้อความของ `dsh-humanizer` (`STYLE_RULES` + `DOMAIN_INTRO`) — ไม่ใช่ข้อความผู้ใช้เห็น และการแปลจะเปลี่ยนน้ำหนักคำสั่งที่ AI ได้รับ
+
+**เครื่องมือ**: `install-plugin-ui.mjs` รองรับ scoped package และหลาย entry ต่อแพ็กเกจ
+
 ## 1.5.2 — แปลการ์ดครบ 45/45 + ลดดีเลย์สลับภาษา
 
 **แปลการ์ดปลั๊กอินครบทุกตัวที่ติดตั้ง**

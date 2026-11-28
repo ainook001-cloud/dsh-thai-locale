@@ -38,11 +38,19 @@ const entryFile = {
   'plugin-guard': 'lib/client.js',
   'compaction-threshold': 'lib/client.js',
   'plugin-thinking-api': 'lib/client.js',
+  logicprobe: 'lib/client.js',
+  'skill-groups': 'lib/commands.js',
+  'mcp-manager': 'lib/index.js',
+  humanizer: 'lib/index.js',
+  'ppt-master': 'lib/runner.js',
+  'ppt-master-tools': 'lib/tools.js',
 };
 
 let plugins = 0;
 let strings = 0;
 const skipped = [];
+
+const pkgName = (name) => name.replace(/-tools$/, '');  // ppt-master-tools → dsh-ppt-master
 
 for (const file of fs.readdirSync(uiDir)) {
   if (!file.endsWith('.json')) continue;
@@ -50,8 +58,29 @@ for (const file of fs.readdirSync(uiDir)) {
   const rel = entryFile[name];
   if (!rel) { skipped.push(name + ' (ไม่มีในรายการ)'); continue; }
 
-  const target = path.join(nm, 'dsh-' + name, rel);
-  if (!fs.existsSync(target)) { skipped.push(name + ' (ไม่ได้ติดตั้ง)'); continue; }
+  // หาโฟลเดอร์แพ็กเกจ: dsh-<name> ตรง ๆ ก่อน แล้วค่อยหาแบบ scoped หรือชื่อลงท้าย -<name>
+  const candidates = [
+    path.join(nm, 'dsh-' + pkgName(name), rel),
+    path.join(nm, '@cccuuuhhh', 'dsh-' + name, rel),
+  ];
+  let target = candidates.find((p) => fs.existsSync(p));
+  if (!target) {
+    // สแกนหาแพ็กเกจที่ลงท้ายด้วย -<name>
+    const scan = (dir) => {
+      for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
+        if (!e.isDirectory()) continue;
+        const full = path.join(dir, e.name);
+        if (e.name.startsWith('@')) { const r = scan(full); if (r) return r; continue; }
+        if (e.name === 'dsh-' + pkgName(name) || e.name.endsWith('-' + pkgName(name))) {
+          const p = path.join(full, rel);
+          if (fs.existsSync(p)) return p;
+        }
+      }
+      return undefined;
+    };
+    try { target = scan(nm); } catch { /* ignore */ }
+  }
+  if (!target) { skipped.push(name + ' (ไม่ได้ติดตั้ง)'); continue; }
 
   const bak = target + '.th-bak';
   if (!fs.existsSync(bak)) fs.copyFileSync(target, bak);

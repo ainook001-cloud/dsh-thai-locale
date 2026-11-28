@@ -1,6 +1,6 @@
 {
   "name": "dsh-thai-locale",
-  "version": "1.5.1",
+  "version": "1.5.2",
   "description": "ชุดภาษาไทยสำหรับ DSH Web (ทดสอบกับ 0.2.1-rc.2) — เพิ่มภาษา th และไทยกวนตีน th-roast (fallback th-roast → th → en) ครบ 4,601 คีย์ใน 75 namespace; คำแปลกวนมาจาก tools/roast-source ที่สร้างซ้ำได้; คาดว่าใช้ได้บน DSH Desktop ที่รัน Web UI เดียวกัน แต่ยังไม่ได้ทดสอบติดตั้งจริง",
   "type": "module",
   "main": "./lib/index.js",
